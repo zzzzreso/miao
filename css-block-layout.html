@@ -67,6 +67,29 @@
       background: yellow;
       text-align: center;
     }
+
+    #d2 {
+      width: 600px;
+      margin: 0 auto;
+      font-size: 0;
+    }
+
+    #d2>div {
+      display: inline-block;
+      box-sizing: border-box;
+      height: 40px;
+      width: 180px;
+      font-size: 16px;
+      line-height: 34px;
+      margin: 0 30px 15px 0;
+      border: 3px solid;
+      background-color: pink;
+      text-align: center;
+    }
+
+    #d2>div:nth-child(3n+3) {
+      margin-right: 0;
+    }
   </style>
 </head>
 
@@ -78,6 +101,20 @@
     页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
     页面主体 宽度600px</p>
   <div id="d1">
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+  </div>
+  <div id="d2">
     <div>宽180高40(包含边框)</div>
     <div>产品</div>
     <div>产品</div>
