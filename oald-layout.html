@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+  }
+
+  .container>div {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .left {
+    width: 20%;
+    background-color: lightblue;
+  }
+
+  .center-left {
+    width: 40%;
+    background-color: lightyellow;
+  }
+  .center-left > div {
+    width: 100%;
+    padding-bottom: 30%;
+    background-color: lightgreen;
+  }
+  .center-right {
+    width: 20%;
+    background-color: lightcyan;
+  }
+
+  .right {
+    width: 20%;
+    background-color: lightcoral;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="left"></div>
+    <div class="center-left">
+      <div></div>
+    </div>
+    <div class="center-right"></div>
+    <div class="right"></div>
+  </div>
+</body>
+
+</html>
