@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%);
+  }
+
+  .container {
+    position: relative;
+    width: 800px;
+    height: 562px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 800px;
+    height: 562px;
+    opacity: 0;
+    transition: 2.5s;
+  }
+
+  input {
+    display: none;
+    z-index: 2;
+  }
+
+  .round {
+    position: relative;
+    margin: 0 3px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: #fff;
+  }
+
+  .indicator {
+    position: relative;
+    top: 510px;
+    text-align: center;
+  }
+
+  #a:checked~.indicator label[for="a"],
+  #b:checked~.indicator label[for="b"],
+  #c:checked~.indicator label[for="c"],
+  #d:checked~.indicator label[for="d"] {
+    background-color: lightblue;
+  }
+
+  section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3200px;
+    font-size: 0;
+    transition: left .5s;
+  }
+
+  #a:checked~section {
+    left: 0;
+  }
+ 
+  #b:checked~section {
+    left: -100%;
+  }
+  #c:checked~section {
+    left: -200%;
+  }
+  #d:checked~section {
+    left: -300%;
+  }
+  #a:checked~section .img-1,
+  #b:checked~section .img-2,
+  #c:checked~section .img-3,
+  #d:checked~section .img-4{
+    opacity: 1;
+  }
+
+  .prev,
+  .next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: #fff;
+    z-index: 5;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    left: 770px;
+  }
+
+  #a:checked~.control-1,
+  #b:checked~.control-2,
+  #c:checked~.control-3,
+  #d:checked~.control-4 {
+    display: block;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <input type="radio" name="slider" checked id="a">
+    <input type="radio" name="slider" id="b">
+    <input type="radio" name="slider" id="c">
+    <input type="radio" name="slider" id="d">
+    <div class="indicator">
+      <label for="a" class="round"></label>
+      <label for="b" class="round"></label>
+      <label for="c" class="round"></label>
+      <label for="d" class="round"></label>
+    </div>
+    <!-- <label for="d" class="prev control-1">‹</label> -->
+    <label for="b" class="next control-1">›</label>
+    <label for="a" class="prev control-2">‹</label>
+    <label for="c" class="next control-2">›</label>
+    <label for="b" class="prev control-3">‹</label>
+    <label for="d" class="next control-3">›</label>
+    <label for="c" class="prev control-4">‹</label>
+    <!-- <label for="a" class="next control-4">›</label> -->
+    <section>
+      <img class="img-1" src="https://wx1.sinaimg.cn/large/71b2cbb3ly1g66eri39tlj216o0u0e8e.jpg" alt="">
+      <img class="img-2" src="https://wx1.sinaimg.cn/large/71b2cbb3ly1g66erergnrj21520u0x6y.jpg" alt="">
+      <img class="img-3" src="https://wx1.sinaimg.cn/large/71b2cbb3ly1g24riddvt6j22io1udqv5.jpg" alt="">
+      <img class="img-4" src="https://wx2.sinaimg.cn/large/71b2cbb3ly1g15z7m6934j217k0u0he3.jpg" alt="">
+    </section>
+  </div>
+</body>
+
+</html>
