@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>radio-button</title>
+</head>
+<style>
+  .btns {
+    padding: 50px 0;
+  }
+
+  ul {
+    padding: 0;
+    margin-left: 50px;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    margin-top: 60px;
+    font-size: 0;
+  }
+
+  input {
+    -webkit-appearance: none;
+    position: relative;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #201F1F;
+    border-radius: 50%;
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+    transition: .5s;
+    z-index: 555;
+  }
+
+  label {
+    vertical-align: middle;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  label:before,
+  label:after {
+    content: '';
+    position: absolute;
+    transform: scale(0);
+    opacity: 0.3;
+    border-radius: 50%;
+    transition: .6s;
+  }
+
+  label:before {
+    left: -15px;
+    top: -15px;
+    width: 70px;
+    height: 70px;
+  }
+
+  label:after {
+    left: -20px;
+    top: -20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  label::before {
+    background-color: #03BE5E;
+  }
+
+  label:after {
+    background-color: #fff;
+  }
+
+  input:checked {
+    border: 3px solid #03BE5E;
+  }
+
+  input:hover {
+    cursor: pointer;
+  }
+
+  .round {
+    position: absolute;
+    transform: scale(0);
+    left: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #03BE5E;
+    transition: .6s;
+  }
+
+  input:checked~span {
+    transform: scale(1);
+  }
+
+  input:checked+label:before,
+  input:checked+label:after {
+    transform: scale(1);
+  }
+
+  input:checked+label:after {
+    opacity: 1;
+  }
+</style>
+
+<body>
+  <ul class="btns">
+    <li>
+      <input type="radio" name="btn" id="a">
+      <label for="a">
+        Radio Button
+      </label>
+      <span class="round"></span>
+    </li>
+    <li>
+      <input type="radio" name="btn" id="b">
+      <label for="b">
+        Radio Button
+      </label>
+      <span class="round"></span>
+    </li>
+    <li>
+      <input type="radio" name="btn" id="c">
+      <label for="c">
+        Radio Button
+      </label>
+      <span class="round"></span>
+    </li>
+  </ul>
+</body>
+
+</html>

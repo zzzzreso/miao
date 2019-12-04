@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>menu</title>
+</head>
+<style>
+  .menu {
+    display: block;
+    z-index: 9999;
+  }
+
+  .menu li {
+    display: inline-block;
+    position: relative;
+  }
+
+  .menu li.dropdown:hover>.submenu {
+    display: block;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 12px 8px;
+    background: lightblue;
+    text-decoration-line: none;
+  }
+
+  .menu li.dropdown>a::after {
+    content: "→";
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  .menu li a:hover {
+    background: lightgreen;
+  }
+
+  .menu .submenu {
+    display: none;
+  }
+
+  .submenu {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    list-style-type: none;
+    display: block;
+    width: 200px;
+    z-index: 9;
+  }
+
+  .submenu li {
+    display: block;
+  }
+
+  .submenu li a {
+    display: block;
+    background: lightblue;
+    color: #fff;
+    padding: 8px 6px;
+    text-decoration-line: none;
+  }
+
+  .menu .submenu>li.dropdown:hover>.submenu {
+    display: block;
+  }
+
+  .menu .submenu .submenu {
+    position: absolute;
+    left: 200px;
+    top: 0px;
+  }
+
+  .submenu li.dropdown>a:after {
+    content: "→";
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  a:active {
+    color: #fff;
+  }
+
+  a:visited {
+    color: #fff;
+  }
+</style>
+
+<body>
+  <ul class="menu">
+    <li class="dropdown">
+      <a href="">菜单</a>
+      <ul class="submenu">
+        <li>
+          <a href="">111</a>
+        </li>
+        <li class="dropdown">
+          <a href="">111</a>
+          <ul class="submenu">
+            <li class="dropdown">
+              <a href="">222</a>
+              <ul class="submenu">
+                <li>
+                  <a href="">333</a>
+                </li>
+                <li class="dropdown">
+                  <a href="">333</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="">444</a>
+                    </li>
+                    <li>
+                      <a href="">444</a>
+                    </li>
+                    <li>
+                      <a href="">444</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">333</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="">222</a>
+            </li>
+          </ul>
+        <li>
+          <a href="">111</a>
+        </li>
+    </li>
+    <li>
+      <a href="">111</a>
+    </li>
+  </ul>
+  </li>
+
+  </ul>
+</body>
+
+</html>
