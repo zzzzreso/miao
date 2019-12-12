@@ -31,6 +31,7 @@ html {
 /* 导航条 */
 .site-topbar {
   position: relative;
+  min-width: 1226px;
   z-index: 40;
   background-color: #333;
 }
@@ -427,10 +428,10 @@ html {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border: 2px solid #B1B1B1;
+  border: 2px solid #b1b1b1;
   border-radius: 50%;
   z-index: 3;
-  background-color: #8E7F72;
+  background-color: #8e7f72;
   cursor: pointer;
 }
 .indicator {
@@ -569,7 +570,7 @@ html {
   padding-left: 10px;
   vertical-align: middle;
 }
-.submenu li:hover .text{
+.submenu li:hover .text {
   color: #ff6700;
 }
 .sidebar-menu .submenu > li.dropdown:hover > .submenu {
@@ -636,7 +637,7 @@ html {
 }
 .info-right > ul > li {
   float: right;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
 }
 .info-right > ul > li:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -1209,4 +1210,25 @@ div.tab-right::after {
 }
 .site-bar ul li.totop a + span {
   margin-top: -35px;
+}
+@media (max-width: 1300px) {
+  .site-bar ul li {
+    width: 25px;
+    height: 40px;
+  }
+  .site-bar ul img {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 20px;
+    height: 20px;
+  }
+  .site-bar ul li.totop a {
+    width: 25px;
+    height: 40px;
+  }
+  .site-bar ul span {
+    display: none;
+  }
 }
