@@ -4,6 +4,9 @@
 html {
   scroll-behavior: smooth;
 }
+html,body {
+  min-width: 1226px;
+}
 .container {
   width: 1226px;
   margin: 0 auto;
