@@ -1,0 +1,193 @@
+/* 底部footer  */
+.site-footer .service {
+  padding: 27px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.site-footer .service ul > li {
+  float: left;
+  width: 19.8%;
+  height: 25px;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+}
+.site-footer .service ul > li:first-child {
+  border-left: none;
+}
+.site-footer .service ul > li a {
+  position: relative;
+  padding-left: 28px;
+  color: #616161;
+  transition: color 0.2s;
+}
+.site-footer .icon-tool::before,
+.site-footer .icon-7::before,
+.site-footer .icon-15::before,
+.site-footer .icon-gift::before,
+.site-footer .icon-address::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 24px;
+  width: 24px;
+}
+.site-footer .icon-tool::before {
+  background: url('../image/tool.svg') center/contain;
+}
+.site-footer .icon-7::before {
+  background: url('../image/icon-7.png') center/contain;
+}
+.site-footer .icon-15::before {
+  background: url('../image/icon-15.png') center/contain;
+}
+.site-footer .icon-gift::before {
+  background: url('../image/icon-gift.png') center/contain;
+}
+.site-footer .icon-address::before {
+  background: url('../image/icon-address.png') center/contain;
+}
+.site-footer .icon-tool:hover:before {
+  background: url('../image/tool-o.svg') center/contain;
+}
+.site-footer .icon-7:hover::before {
+  background: url('../image/icon-7-o.png') center/contain;
+}
+.site-footer .icon-15:hover::before {
+  background: url('../image/icon-15-o.png') center/contain;
+}
+.site-footer .icon-gift:hover::before {
+  background: url('../image/icon-gift-o.png') center/contain;
+}
+.site-footer .icon-address:hover::before {
+  background: url('../image/icon-address-o.png') center/contain;
+}
+.site-footer .service ul > li a:hover {
+  color: #ff6700;
+}
+.site-footer .links {
+  padding: 40px 0;
+}
+.site-footer .col-links {
+  float: left;
+  width: 160px;
+  height: 112px;
+  margin: 0;
+}
+.site-footer .col-links dt {
+  margin: -1px 0 26px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #424242;
+}
+.site-footer .col-links dd {
+  margin: 15px 0 0;
+  font-size: 12px;
+}
+.site-footer .col-links dd:hover a {
+  color: #ff6700;
+}
+.site-footer .col-links a {
+  color: #757575;
+}
+.site-footer .contact {
+  float: left;
+  margin-left: 10px;
+  padding-left: 60px;
+  text-align: center;
+  border-left: 1px solid #e0e0e0;
+}
+.site-footer .contact .phone {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1;
+  color: #ff6700;
+}
+.site-footer .contact .time {
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #616161;
+}
+.customer-service {
+  position: relative;
+  margin: 0 auto;
+  width: 118px;
+  height: 28px;
+  line-height: 28px;
+  color: #ff6700;
+  font-size: 12px;
+  text-indent: 15px;
+  border: 1px solid #ff6700;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.customer-service::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 5px;
+  height: 16px;
+  width: 16px;
+  background: url('../image/message.png') center;
+  transition: 0.4s;
+}
+.customer-service:hover {
+  background-color: #ff6700;
+  color: #fff;
+}
+.customer-service:hover::before {
+  background: url('../image/message-white.png') center;
+}
+.site-footer .site-info {
+  padding: 30px 0;
+  background-color: #fafafa;
+}
+.site-info .logo {
+  float: left;
+  width: 57px;
+  height: 57px;
+  background: url('https://s02.mifile.cn/assets/static/image/logo-footer.png');
+}
+.info-text {
+  float: left;
+  width: 1150px;
+  margin-left: 15px;
+}
+.info-text ul li {
+  float: left;
+  font-size: 12px;
+  line-height: 18px;
+}
+.info-text ul li a,
+.info-text ul li .sep {
+  color: #757575;
+}
+.info-text ul li a:hover {
+  color: #ff6700;
+}
+.info-text ul li .sep {
+  margin: 0 0.3em;
+}
+
+.info-text p,
+.info-text p a {
+  font-size: 12px;
+  color: #b0b0b0;
+  line-height: 18px;
+}
+.info-text p a:hover {
+  color: #ff6700;
+}
+.info-links {
+  padding: 10px 0 0 72px;
+}
+.info-links img {
+  height: 28px;
+}
+.slogan {
+  margin: 30px auto 0;
+  width: 267px;
+  height: 19px;
+  background: url(https://s02.mifile.cn/assets/static/image/slogan2016.png);
+}

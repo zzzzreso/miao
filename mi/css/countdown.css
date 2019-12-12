@@ -1,0 +1,115 @@
+@keyframes tick6 {
+  0% {
+    margin-top: 0;
+  }
+  16.666667% {
+    margin-top: -2em;
+  }
+  33.333333% {
+    margin-top: -4em;
+  }
+  50% {
+    margin-top: -6em;
+  }
+  66.666667% {
+    margin-top: -8em;
+  }
+  83.333333% {
+    margin-top: -10em;
+  }
+  100% {
+    margin-top: -12em;
+  }
+}
+
+@keyframes tick10 {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: -2em;
+  }
+  20% {
+    margin-top: -4em;
+  }
+  30% {
+    margin-top: -6em;
+  }
+  40% {
+    margin-top: -8em;
+  }
+  50% {
+    margin-top: -10em;
+  }
+  60% {
+    margin-top: -12em;
+  }
+  70% {
+    margin-top: -14em;
+  }
+  80% {
+    margin-top: -16em;
+  }
+  90% {
+    margin-top: -18em;
+  }
+  100% {
+    margin-top: -20em;
+  }
+}
+.countdown {
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+}
+.digit {
+  position: relative;
+  display: inline-block;
+  height: 48px;
+  width: 13px;
+  color: #fff;
+  line-height: 48px;
+  font-size: 24px;
+  overflow: hidden;
+  z-index: 1;
+}
+.digit span {
+  display: block;
+  height: 48px;
+  width: 100%;
+}
+.digit:nth-child(3), .digit:nth-child(6) {
+  margin: 0 4px;
+  color: #605751;
+}
+.minutes-digit-one {
+  animation: tick6 3600s infinite step-end;
+}
+.minutes-digit-two {
+  animation: tick10 600s infinite step-end;
+}
+.seconds-digit-one {
+  animation: tick6 60s infinite step-end;
+}
+.seconds-digit-two {
+  animation: tick10 10s infinite step-end;
+}
+.countdown em.bg,
+.countdown em.bg::before,
+.countdown em.bg::after {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: #605751;
+}
+.countdown em.bg {
+  left: 93px;
+}
+.countdown em.bg::before {
+  content: "";
+  left: -61px;
+}
+.countdown em.bg::after {
+  content: "";
+  left: 61px;
+}
