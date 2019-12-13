@@ -219,12 +219,14 @@ html,body {
 }
 .header-logo {
   float: left;
-  width: 55px;
-  height: 55px;
   background-color: #ff6700;
 }
 .header-logo a {
   position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
 }
 .header-logo a::before,
 .header-logo a::after {
@@ -251,7 +253,10 @@ html,body {
 }
 .header-nav {
   float: left;
-  margin-left: 175px;
+  margin-left: 190px;
+}
+.header-nav-list {
+  float: left;
 }
 .header-nav-list li {
   float: left;
@@ -262,6 +267,64 @@ html,body {
 .header-nav-list li:hover {
   color: #ff7f00;
 }
+/* 手机列表 */
+.site-header-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  height: 0;
+  visibility: hidden;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  overflow: hidden;
+  z-index: 35;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.02);
+  transition: 0.3s;
+}
+.site-header-menu .list > li {
+  float: left;
+  position: relative;
+  padding: 35px 22px 0;
+  text-align: center;
+  font-size: 12px;
+}
+.site-header-menu .list > li:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 1px;
+  height: 100px;
+  background-color: #e0e0e0;
+}
+.site-header-menu .list > li img {
+  width: 160px;
+  height: 110px;
+}
+.site-header-menu .list > li a {
+  margin: 0;
+}
+.site-header-menu .list .title {
+  color: #333;
+  line-height: 20px;
+}
+.site-header-menu .list .price {
+  color: #ff6700;
+  line-height: 20px;
+}
+.header-nav-list:hover .site-header-menu{
+  visibility: visible;
+  height: 230px;
+  /* border-top: none; */
+}
+.header-nav-list > li:hover .site-header-menu {
+  visibility: visible;
+  height: 230px;
+  z-index: 45;
+}
+
+/* 搜索框 */
 .header-search {
   float: right;
   position: relative;
@@ -279,7 +342,6 @@ html,body {
   outline: none;
   box-sizing: border-box;
 }
-
 #search + label {
   float: right;
   position: relative;
@@ -328,7 +390,6 @@ html,body {
 #search + label > span:last-of-type {
   left: -90px;
 }
-
 /* 搜索框自动填充菜单 */
 .keywordList {
   display: none;
@@ -349,57 +410,6 @@ html,body {
 }
 .result-list li:hover {
   background-color: #fafafa;
-}
-
-/* 手机列表 */
-.site-header-menu {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100px;
-  height: 0;
-  visibility: hidden;
-  border-top: 1px solid #e0e0e0;
-  background: #fff;
-  overflow: hidden;
-  z-index: 35;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
-  transition: 0.3s;
-}
-.site-header-menu .list > li {
-  float: left;
-  position: relative;
-  padding: 35px 22px;
-  text-align: center;
-  font-size: 12px;
-}
-.site-header-menu .list > li:not(:first-child)::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 35px;
-  width: 2px;
-  height: 100px;
-  background-color: #e0e0e0;
-}
-.site-header-menu .list > li img {
-  width: 160px;
-  height: 110px;
-}
-.site-header-menu .list > li a {
-  margin: 0;
-}
-.site-header-menu .list .title {
-  color: #333;
-  line-height: 20px;
-}
-.site-header-menu .list .price {
-  color: #ff6700;
-  line-height: 20px;
-}
-.header-nav-list > li:hover .site-header-menu {
-  visibility: visible;
-  height: 230px;
 }
 
 /* 轮播图  */
@@ -1005,6 +1015,7 @@ main .bg img {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
+/* 文字用伪元素覆盖 */
 div.tab-left::after,
 div.tab-right::after {
   position: absolute;
@@ -1018,7 +1029,6 @@ div.tab-right::after {
 }
 div.tab-left::after {
   content: '热门';
-  /* visibility: visible; */
 }
 div.tab-right::after {
   content: '电视影音';
@@ -1056,7 +1066,7 @@ div.tab-right::after {
   transition: visibility 0.1s linear;
 }
 .tab-right:hover ~ .content-1 {
-  display: none;
+  visibility: hidden;
 }
 
 .tab-right.cover:hover ~ .tab-left::after {
@@ -1233,5 +1243,8 @@ div.tab-right::after {
   }
   .site-bar ul span {
     display: none;
+  }
+  .site-bar {
+    bottom: 45px;
   }
 }

@@ -118,7 +118,7 @@
   visibility: hidden;
   opacity: 0;
   background-color: #fff;
-  transition: 0.3s;
+  transition: .3s;
   z-index: 200;
 }
 .video-content .title {
@@ -173,6 +173,7 @@
   visibility: visible;
   opacity: 1;
 }
+
 #video-1:checked ~ .cover,
 #video-2:checked ~ .cover,
 #video-3:checked ~ .cover,
