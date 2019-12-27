@@ -15,7 +15,7 @@
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
-  var d = (a + b) / c
+  var d = Math.floor((a + b) / c)
   console.log(d)
 </script>
 <script id="ch0103/04">
@@ -23,7 +23,7 @@
   var b = Number(prompt())
   var c = a % b
   var d = Math.floor(a / b)
-  console.log(c + ' ' + d)
+  console.log(d + ' ' + c)
 </script>
 <script id="ch0103/05">
   var a = Number(prompt())
@@ -50,14 +50,13 @@
 <script id="ch0103/08">
   var f = Number(prompt())
   var c = 5 * (f - 32) / 9
-  c = Number(c.toFixed(5))
-  console.log(c)
+  console.log(c.toFixed(5))
 </script>
 <script id="ch0103/09">
   var r = Number(prompt())
-  var d = Number((2 * d).toFixed(4))
-  var l = Number((2 * Math.PI * r).toFixed(4))
-  var s = Number((Math.PI * Math.pow(r, 2)).toFixed(4))
+  var d = (2 * r).toFixed(4)
+  var l = (2 * Math.PI * r).toFixed(4)
+  var s = (Math.PI * Math.pow(r, 2)).toFixed(4)
   console.log(d + ' ' + l + ' ' + s)
 </script>
 <script id="ch0103/10">
@@ -90,7 +89,7 @@
   var h = Number(prompt())
   var r = Number(prompt())
   var c = 20 * Math.pow(10, 3) / (Math.PI * Math.pow(r, 2) * h)
-  console.log(c)
+  console.log(Math.ceil(c))
 </script>
 <script id="ch0103/15">
   var n = Number(prompt())
