@@ -207,7 +207,7 @@
   var a = Number(prompt())
   var walkTime = a / 1.2
   var bikeTime = 27 + 23 + a / 3
-  walkTime > bikeTime ? console.log('Walk') : walkTime === bikeTime ? console.log('All') : console.log('Bike')
+  walkTime > bikeTime ? console.log('Bike') : walkTime === bikeTime ? console.log('All') : console.log('Walk')
 </script>
 <script id="ch0104/13">
   var x = Number(prompt())
@@ -262,7 +262,7 @@
 <script id="ch0104/18">
   var x = Number(prompt())
   var y = Number(prompt())
-  x > -1 && x < 1 && y > -1 && y < 1 ? console.log('yes') : console.log('no')
+  Math.abs(x) <= 1 && Math.abs(y) <= 1 ? console.log('yes') : console.log('no')
 </script>
 <script id="ch0104/19">
   var a = Number(prompt())
@@ -312,4 +312,3 @@
   var a = n - Math.ceil(y / x)
   console.log(a)
 </script>
-
