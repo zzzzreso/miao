@@ -313,3 +313,639 @@
   var a = n - Math.ceil(y / x)
   console.log(a)
 </script>
+<script id="ch0105/01">
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    sum += a
+  }
+  var res = (sum / n).toFixed(2)
+</script>
+<script id="ch0105/02">
+  var sum = 0
+  for (var i = 0; i < 12; i++) {
+    var a = Number(prompt())
+    sum += a
+  }
+  var res = '$' + (sum / 12).toFixed(2)
+  console.log(res)
+</script>
+<script id="ch0105/03">
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    sum += a
+  }
+  var res = (sum / n).toFixed(4)
+  console.log(res)
+</script>
+<script id="ch0105/04">
+  var n = Number(prompt()), sum = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    sum += a
+  }
+  var res = (sum / n).toFixed(5)
+  console.log(`${sum} ${res}`)
+</script>
+<script id="ch0105/05">
+  var n = Number(prompt()), sum = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    sum += a
+  }
+  var res = sum / n
+  console.log(res)
+</script>
+<script id="ch0105/06">
+  var n = Number(prompt())
+  var max = 0, min = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    max = Math.max(max, a)
+    min = Math.min(min, a)
+  }
+  console.log(max - min)
+</script>
+<script id="ch0105/07">
+  var n = Number(prompt())
+  var gold = 0, silver = 0, bronze = 0, total = 0
+  for (var i = 0; i < n; i++) {
+    for (var j = 0; j < 3; j++) {
+      var a = Number(prompt())
+      gold = j === 0 ? gold + a : gold
+      silver = j === 1 ? silver + a : silver
+      bronze = j === 2 ? bronze + a : bronze
+      total += a
+    }
+  }
+  console.log(`${gold} ${silver} ${bronze} ${total}`)
+</script>
+<script id="ch0105/08">
+  var n = Number(prompt())
+  var res = (n - 2) * 180
+  for (var i = 0; i < n - 1; i++) {
+    var a = Number(prompt())
+    res = res - a
+  }
+  console.log(res)
+</script>
+<script id="ch0105/09">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = m; i <= n; i++) {
+    if (i % 2 === 1) {
+      sum += i
+    }
+  }
+  console.log(sum)
+</script>
+<script id="ch0105/10">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = m; i <= n; i++) {
+    if (i % 17 === 0) {
+      sum += i
+    }
+  }
+  console.log(sum)
+</script>
+<script id="ch0105/11">
+  var k = Number(prompt())
+  var oneCount = 0, fiveCount = 0, tenCount = 0
+  for (var i = 0; i < k; i++) {
+    var a = Number(prompt())
+    if (a === 1) oneCount++
+    if (a === 5) fiveCount++
+    if (a === 10) tenCount++
+  }
+  console.log(oneCount)
+  console.log(fiveCount)
+  console.log(tenCount)
+</script>
+<script id="ch0105/12">
+  var n = Number(prompt())
+  var m = Number(prompt())
+  var count = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    if (a === m) count++
+  }
+  console.log(count)
+</script>
+<script id="ch0105/13">
+  var a = Number(prompt())
+  var n = Number(prompt())
+  var res = 1
+  for (var i = 0; i < n; i++) {
+    res = res * a
+  }
+  console.log(res)
+</script>
+<script id="ch0105/14">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var res = x
+  for (var i = 0; i < n; i++) {
+    res = (1 + 0.001) * res
+  }
+  console.log(res.toFixed(4))
+</script>
+<script id="ch0105/15">
+  var r = Number(prompt())
+  var m = Number(prompt())
+  var y = Number(prompt())
+  var res = m
+  for (var i = 0; i < y; i++) {
+    res = res * (1 + r / 100)
+  }
+  console.log(Math.floor(res))
+</script>
+<script id="ch0105/16">
+  var n = Number(prompt())
+  var k = Number(prompt())
+  var res = n, price = 200
+  var time = 1
+  while (time <= 20) {
+    if (res >= price) {
+      break
+    }
+    time++
+    res += n
+    price = price * (1 + k / 100)
+  }
+  time <= 20 ? console.log(time) : console.log('Impossible')
+</script>
+<script id="ch0105/17">
+  var k = Number(prompt())
+  if (k === 1 || k === 2) console.log(1)
+  if (k >= 3) {
+    var res = 0, pre1 = 1, pre2 = 1
+    for (var i = 2; i < k; i++) {
+      res = pre1 + pre2
+      pre1 = pre2
+      pre2 = res
+    }
+    console.log(res)
+  }
+</script>
+<script id="ch0105/18">
+  var n = Number(prompt())
+  var x, y, a, b
+  for (var i = 0; i < n; i++) {
+    a = Number(prompt())
+    b = Number(prompt())
+    if (i === 0) x = b / a
+    if (i > 0) y = b / a
+    if (x && y) {
+      if (y - x > 0.05) {
+        console.log('better')
+      } else if (x - y > 0.05) {
+        console.log('worse')
+      } else {
+        console.log('same')
+      }
+    }
+  }
+</script>
+<script id="ch0105/19">
+  var n = Number(prompt())
+  var x, y, z, totalTime = 0
+  for (var i = 0; i < n; i++) {
+    x = Number(prompt())
+    y = Number(prompt())
+    z = Number(prompt())
+    totalTime = totalTime + Math.sqrt((x ** 2 + y ** 2)) / 50 * 2 + z * (1 + 0.5)
+  }
+  console.log(Math.ceil(totalTime))
+</script>
+<script id="ch0105/20">
+  var h = Number(prompt())
+  var count = 1, x = h, sum = h
+  while (count <= 10) {
+    sum = count === 1 ? sum + x / 2 : sum + x + x / 2
+    x = x / 2
+    count++
+  }
+  console.log(sum)
+  console.log(x)
+</script>
+<script id="ch0105/21">
+  var n = Number(prompt())
+  var m
+  while (n !== 1) {
+    if (n % 2 === 1) {
+      m = n * 3 + 1
+      console.log(n + '*3+1=' + m)
+    } else {
+      m = n / 2
+      console.log(n + '/2=' + m)
+    }
+    n = n % 2 === 0 ? n / 2 : n * 3 + 1
+  }
+  console.log('End')
+</script>
+<script id="ch0105/22">
+  var a, money = 300, notEnoughTime, remainder = 0, sum = 0
+  for (var i = 0; i < 12; i++) {
+    a = Number(prompt())
+    remainder = remainder + money - a
+    if (remainder >= 100) {
+      sum += Math.floor(remainder / 100) * 100
+      remainder = remainder % 100
+    }
+    if (remainder < 0) {
+      notEnoughTime = i + 1
+      console.log('-' + notEnoughTime)
+      break
+    }
+  }
+  if (!notEnoughTime) {
+    sum = sum * (1 + 0.2) + remainder
+    console.log(sum)
+  }
+</script>
+<script id="ch0105/23">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var last = m
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    last -= a
+    if (last <= 0) break
+  }
+  console.log(n - i)
+</script>
+<script id="ch0105/24">
+  var n = Number(prompt())
+  var time = 0, max = 0
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    var b = Number(prompt())
+    if (a >= 90 && a <= 140 && b >= 60 && b <= 90) {
+      time++
+      max = Math.max(time, max)
+    } else {
+      time = 0
+    }
+  }
+  console.log(max)
+</script>
+<script id="ch0105/25">
+  var ten, nine, seven, y, x
+  for (var i = 0; i < 343; i++) {
+    ten = i
+    nine = Number(i.toString(9))
+    seven = Number(i.toString(7))
+    if ((nine / 100) >= 1 && (nine / 100) <= 9.99 && (seven / 100) >= 1 && (seven / 100) <= 9.99) {
+      x = nine
+      y = 0
+      while (x !== 0) {
+        y = y * 10 + x % 10
+        x = Math.floor(x / 10)
+      }
+      if (y === seven) {
+        console.log(ten)
+        console.log(seven)
+        console.log(nine)
+        break
+      }
+    }
+  }
+</script>
+<script id="ch0105/26">
+  var n = Number(prompt()), count = 0, res
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    res = a % 10 - Math.floor(a / 1000) - (Math.floor(a / 100) % 10) - (Math.floor(a / 10) % 10)
+    if (res > 0) count++
+  }
+  console.log(count)
+</script>
+<script id="ch0105/27">
+  var k = Number(prompt())
+  var sn = 1, n = 1
+  while (sn <= k) {
+    sn = sn + 1 / (n + 1)
+    n++
+  }
+  console.log(n)
+</script>
+<script id="ch0105/28">
+  var x = Number(prompt())
+  var y = 0, res = ''
+  while (x !== 0) {
+    y = x % 10
+    x = Math.floor(x / 10)
+    res += y + ' '
+  }
+  console.log(res.slice(0, -1))
+</script>
+<script id="ch0105/29">
+  var x = Number(prompt())
+  var y = 0, isNegativeNum = false
+  while (x !== 0) {
+    if (x < 0) {
+      x = -x
+      isNegativeNum = true
+    }
+    y = y * 10 + x % 10
+    x = Math.floor(x / 10)
+  }
+  if (isNegativeNum) {
+    console.log(-y)
+  } else {
+    console.log(y)
+  }
+</script>
+<script id="ch0105/30">
+  var m = Number(prompt())
+  var k = Number(prompt())
+  var count = 0, x = m, y = 0
+  while (x !== 0) {
+    y = x % 10
+    x = Math.floor(x / 10)
+    if (y === 3) count++
+  }
+  if (m % 19 === 0 && count === k) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+<script id="ch0105/31">
+  var n = Number(prompt())
+  var m = Number(prompt())
+  var res = ''
+  //对于1-n的数来说，在1-m的约数的个数为奇数的数
+  for (var i = 1; i <= n; i++) {
+    var j = 1, count = 0
+    while (j <= m && j <= i) {
+      if (i % j === 0) {
+        count++
+      }
+      j++
+    }
+    if (count % 2 === 1) res += i + ','
+  }
+  res = res.slice(0, -1)
+  console.log(res)
+</script>
+<script id="ch0105/32">
+  var n = Number(prompt())
+  var q = 2, p = 1, sum = 0, x, temp
+  for (var i = 1; i <= n; i++) {
+    x = q / p
+    temp = q
+    q = temp + p
+    p = temp
+    sum = sum + x
+  }
+  console.log(sum.toFixed(4))
+</script>
+<script id="ch0105/33">
+  var n = Number(prompt())
+  var res = 0, x
+  for (var i = 1; i <= n; i++) {
+    x = 1 / i
+    res = i % 2 === 1 ? res + x : res - x
+  }
+  console.log(res.toFixed(4))
+</script>
+<script id="ch0105/34">
+  var n = Number(prompt())
+  var res = 0, x = 1
+  for (var i = 1; i <= n; i++) {
+    x *= i
+    res += x
+  }
+  console.log(res)
+</script>
+<script id="ch0105/35">
+  var n = Number(prompt())
+  var y = 1, res = 1, x
+  for (var i = 1; i <= n; i++) {
+    y *= i
+    x = 1 / y
+    res += x
+  }
+  console.log(res.toFixed(10))
+</script>
+<script id="ch0105/36">
+  var x = Number(prompt())
+  var y = Number(prompt())
+  var n, res = 1
+  for (var i = 1; i <= y; i++) {
+    n = Math.pow(x, i)
+    res += n
+  }
+  console.log(res.toFixed(2))
+</script>
+<script id="ch0105/37">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var x = Number(prompt())
+  var times = n - 1
+  while (x * times >= m) {
+    x -= Math.ceil(m / times)
+    n += Math.floor(m / n)
+    times = n - 1
+  }
+  console.log(n)
+</script>
+<script id="ch0105/38">
+  var n = Number(prompt())
+  var c, res = ''
+  for (var i = n; i >= 0; i--) {
+    var a = Number(prompt())
+    c = a * i
+    if (i > 0) res += c + ' '
+  }
+  console.log(res.slice(0, -1))
+</script>
+<script id="ch0105/39">
+  var n = Number(prompt())
+  var res = 0, count, y, x
+  for (var i = 1; i <= n; i++) {
+    if (i % 7 === 0) continue
+    count = 0, y = 0, x = i
+    while (x !== 0) {
+      y = x % 10
+      x = Math.floor(x / 10)
+      if (y === 7) count++
+    }
+    if (count) continue
+    res += i ** 2
+  }
+  console.log(res)
+</script>
+<script id="ch0105/40">
+  var n = Number(prompt())
+  var count = 0, x, y
+  for (var i = 1; i <= n; i++) {
+    x = i
+    y = 0
+    while (x !== 0) {
+      y = x % 10
+      x = Math.floor(x / 10)
+      if (y === 1) count++
+    }
+  }
+  console.log(count)
+</script>
+<script id="ch0105/41">
+  var l = Number(prompt())
+  var r = Number(prompt())
+  var count = 0
+  for (var i = l; i <= r; i++) {
+    var x = i, y = 0
+    while (x !== 0) {
+      y = x % 10
+      x = Math.floor(x / 10)
+      if (y === 2) count++
+    }
+  }
+  console.log(count)
+</script>
+<script id="ch0105/42">
+  var h = Number(prompt())
+  var w = Number(prompt())
+  var str = prompt()
+  var isSolid = Number(prompt())
+  var res = ''
+  for (var i = 1; i <= h; i++) {
+    for (var j = 1; j <= w; j++) {
+      if (!isSolid && i > 1 && i < h) {
+        res += (j > 1 && j < w) ? ' ' : str
+      } else {
+        res += str
+      }
+    }
+    res += '\n'
+  }
+  console.log(res)
+</script>
+<script id="ch0105/43">
+  var n = Number(prompt())
+  var i = 2
+  while (n % i !== 0) {
+    i++
+  }
+  console.log(n / i)
+</script>
+<script id="ch0105/44">
+  var n = Number(prompt())
+  var count = 0, i = 2, j = 2, isPrime = true
+  while (count < n) {
+    for (var j = 1; j <= Math.sqrt(i); j++) {
+      if (i % j === 0 && j !== 1) {
+        isPrime = false
+      }
+    }
+    if (isPrime) {
+      count++
+    }
+    isPrime = true
+    i++
+  }
+  console.log(i - 1)
+</script>
+<script id="ch0105/45">
+  var n = Number(prompt())
+  var res = 0, x = 0, max = 1, min = 0
+  for (var i = 1, j = 1; i <= n; i++) {
+    if (i > min && i <= max) {
+      x = j
+    } else {
+      j++
+      x = j
+      max = j * (j + 1) / 2
+      min = (j - 1) * j / 2
+    }
+    res += x
+  }
+  console.log(res)
+</script>
+<script id="ch0106/01">
+  var n = Number(prompt())
+  var arr = [], res
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    arr.push(a)
+  }
+  var m = Number(prompt())
+  res = arr.filter(item => item === m).length
+  console.log(res)
+</script>
+<script id="ch0106/02">
+  var arr = []
+  for (var i = 0; i < 10; i++) {
+    var a = Number(prompt())
+    arr.push(a)
+  }
+  var n = Number(prompt())
+  var res = arr.filter(item => item <= (140)).length
+  console.log(res)
+</script>
+<script id="ch0106/03">
+  var price = [28.9, 32.7, 45.6, 78, 35, 86.2, 27.8, 43, 56, 65]
+  var arr = [], a
+  for (var i = 0; i < 10; i++) {
+    a = Number(prompt())
+    arr.push(a)
+  }
+  var res = arr.reduce((acc, cur, idx) => acc + cur * price[idx], 0)
+  console.log(res.toFixed(1))
+</script>
+<script id="ch0106/04">
+  var n = Number(prompt())
+  var arr = []
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    arr.push(a)
+  }
+  for (var j = 0; j < arr.length / 2; j++) {
+    ;[arr[j], arr[arr.length - 1 - j]] = [arr[arr.length - 1 - j], arr[j]]
+  }
+  console.log(arr.join(' '))
+</script>
+<script id="ch0106/05">
+  var n = Number(prompt())
+  var arr = [], str = '', res = new Array(4).fill(0)
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    arr.push(a)
+  }
+  arr.forEach(item => {
+    if (item >= 0 && item <= 18) {
+      res[0]++
+    }
+    if (item >= 19 && item <= 35) {
+      res[1]++
+    }
+    if (item >= 36 && item <= 60) {
+      res[2]++
+    }
+    if (item >= 61) {
+      res[3]++
+    }
+  })
+  res.forEach(item => str += (item / n).toFixed(2) + "%\n")
+  console.log(str)
+</script>
+<script id="ch0106/06">
+
+</script>
+<script id="ch0106/07"></script>
+<script id="ch0106/08"></script>
+<script id="ch0106/09"></script>
+<script id="ch0106/10"></script>
+<script id="ch0106/11"></script>
+<script id="ch0106/12"></script>
+<script id="ch0106/13"></script>
+<script id="ch0106/14"></script>
+<script id="ch0106/15"></script>
