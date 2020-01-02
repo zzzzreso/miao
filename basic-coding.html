@@ -321,6 +321,7 @@
     sum += a
   }
   var res = (sum / n).toFixed(2)
+  console.log(res)
 </script>
 <script id="ch0105/02">
   var sum = 0
@@ -351,13 +352,12 @@
   console.log(`${sum} ${res}`)
 </script>
 <script id="ch0105/05">
-  var n = Number(prompt()), sum = 0
+  var n = Number(prompt()), sum = 0, max = 0
   for (var i = 0; i < n; i++) {
     var a = Number(prompt())
-    sum += a
+    max = Math.max(max, a)
   }
-  var res = sum / n
-  console.log(res)
+  console.log(max)
 </script>
 <script id="ch0105/06">
   var n = Number(prompt())
