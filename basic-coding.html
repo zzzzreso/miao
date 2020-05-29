@@ -525,14 +525,14 @@
 </script>
 <script id="ch0105/20">
   var h = Number(prompt())
-  var count = 1, x = h, sum = h
+  var count = 1, x = h, sum = 0
   while (count <= 10) {
-    sum = count === 1 ? sum + x / 2 : sum + x + x / 2
-    x = x / 2
+    sum += 2 * h
+    h /= 2
     count++
   }
-  console.log(sum)
-  console.log(x)
+  console.log(sum - x)
+  console.log(h)
 </script>
 <script id="ch0105/21">
   var n = Number(prompt())
@@ -938,9 +938,27 @@
   console.log(str)
 </script>
 <script id="ch0106/06">
+  var l = Number(prompt())
+  var m = Number(prompt())
+  var arr = new Array(l + 1).fill(1), a, b
+  for (var j = 0; j < m; j++) {
+    a = +prompt()
+    b = +prompt()
+    arr.fill(0, a, b + 1)
+  }
+  var res = arr.filter(item => item === 1).length
+  console.log(res)
+</script>
+<script id="ch0106/07">
+  var n = +prompt()
+  var arr = []
+  for (var i = 0; i < n; i++) {
+    var a = +prompt()
+    arr.push(a)
+  }
+  if (arr.length === 1) console.log('Jolly')
 
 </script>
-<script id="ch0106/07"></script>
 <script id="ch0106/08"></script>
 <script id="ch0106/09"></script>
 <script id="ch0106/10"></script>
@@ -949,3 +967,14 @@
 <script id="ch0106/13"></script>
 <script id="ch0106/14"></script>
 <script id="ch0106/15"></script>
+<script id="sqrt">
+  n = +prompt()
+  var k, a = n, b = n
+  var count = 0
+  while (b * b - a > 0.0000001) {
+    count++
+    k = 2 * b
+    b = (a + k * b - b ** 2) / k
+  }
+  console.log(b)
+</script>
